@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dennis Julio – Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <!-- Navigatie -->
+  <nav class="navbar">
+    <h1>Dennis Julio</h1>
+    <ul class="nav-links">
+      <li><a href="#video">Home</a></li>
+      <li><a href="#over">Over</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero sectie met video -->
+  <section class="video-section" id="video">
+    <div class="video-wrapper">
+      <div class="video-placeholder"></div>
+      <iframe src="https://player.vimeo.com/video/1100130870?autoplay=1&muted=1&loop=1&background=1"
+        frameborder="0"
+        allow="autoplay; fullscreen"
+        allowfullscreen>
+      </iframe>
+      <div class="hero-text">
+        <h1>Dennis Julio</h1>
+        <p>Videomaker</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scrollbare content eronder -->
+  <section class="about-section" id="over">
+    <div class="about-container">
+      <div class="about-text">
+        <h1>Over mij</h1>
+        <p>Hoi! Ik ben Dennis - een nieuwsgierige videomaker die houdt van het ontdekken en vertellen van verhalen via media. Op jonge leeftijd dook ik in de mediawereld als editor van Giel Beelen, waarna ik via mijn stage bij Andere Tijden en verschillende freelance opdrachten verder ontwikkelde. Recent heb ik mijn Bachelor of Arts Cum Laude behaald. Op deze website neem ik je mee langs projecten waar ik aan heb gewerkt en laat ik zien wat ik voor jou kan betekenen!</p>
+      </div>
+      <div class="card">
+        <div class="head">Dennis Julio</div>
+        <iframe
+          src="https://player.vimeo.com/video/1100245399?autoplay=1&muted=1&loop=1&background=1"
+          class="media"
+          allow="autoplay; fullscreen"
+          allowfullscreen
+        ></iframe>
+    </div>
+  </section>
+
+  <section class="projects-section" id="portfolio">
+    <div class="project-header"><h1>Mijn werk</h1></div>
+    <div class="project-scroll">
+            <div class="project">
+      <div class="card">
+        <div class="head">Licht, Zwart, Grijs</div>
+          <img src="docwip.png" class="media" alt="Documentaire WIP">
+        
+        <div class="button" onclick="openOverlay('lzg')">Lees meer</div>
+      </div>
+      <div class="project-label">Documentaire</div>
+    </div>
+
+    <div class="project">
+      <div class="card">
+        <div class="head">Wegwijzer Losser</div>
+        <img src="ww_promo.jpeg" class="media">
+        <div class="button" onclick="openOverlay('wl')">Lees meer</div>
+      </div>
+      <div class="project-label">Promotievideo</div>
+    </div>
+
+    <div class="project">
+      <div class="card">
+        <div class="head">Andere Tijden Sport</div>
+        <img src="at_sport.jpg" class="media" alt="Documentaire WIP">
+        <div class="button" onclick="openOverlay('ats')">Lees meer</div>
+      </div>
+      <div class="project-label">Grafisch Werk</div>
+    </div>
+
+    <div class="project">
+      <div class="card">
+        <div class="head">Andere Tijden</div>
+        <img src="atpp1.jpg" class="media" alt="Documentaire WIP">
+        <div class="button" onclick="openOverlay('atpp')">Lees meer</div>
+      </div>
+      <div class="project-label">Huisstijl</div>
+    </div>
+
+    <div class="project">
+      <div class="card">
+        <div class="head">Andere Tijden</div>
+        <img src="at_socials.jpg" class="media" alt="Documentaire WIP">
+        <div class="button" onclick="openOverlay('at')">Lees meer</div>
+      </div>
+      <div class="project-label">Social Media</div>
+    </div>
+
+    <div class="project">
+      <div class="card">
+        <div class="head">In Search of Music</div>
+        <img src="isom.jpg" class="media">
+        <div class="button" onclick="openOverlay('isom')">Lees meer</div>
+      </div>
+      <div class="project-label">Documentaire</div>
+    </div>
+
+    <div class="project">
+      <div class="card">
+        <div class="head">Bloemendagen</div>
+        <img src="bd1.jpg" class="media">
+        <div class="button" onclick="openOverlay('bd')">Lees meer</div>
+      </div>
+      <div class="project-label">Promotievideo</div>
+    </div>
+
+  </section>
+
+<script>
+  function openOverlay(overlayId) {
+    document.getElementById(overlayId).classList.add('active');
+  }
+
+  function closeOverlay(overlayId) {
+    document.getElementById(overlayId).classList.remove('active');
+  }
+</script>
+
+  <div class="project-overlay" id="lzg">
+    <div class="content">
+      <h1>Licht, Zwart, Grijs</h1>
+      <h3>Documentaire</h3>
+
+      <p>‘Licht, Zwart, Grijs’ is een korte documentaire die onderzoekt hoe mensen zich oorlog kunnen voorstellen wanneer ze die zelf nooit hebben meegemaakt. Gemaakt in opdracht en in samenwerking met Stichting Levend Verleden Oost Nederland.</p>
+
+      <div class="project-scroll">
+        <div class="img"><img src="docwip.png"></div>
+        <div class="img"><img src="lzg1.jpg"></div>
+        <div class="img"><img src="lzg2.jpg"></div>
+        <div class="img"><img src="lzg3.jpg"></div>
+      </div>
+
+      <div class="button" onclick="closeOverlay('lzg')">Sluiten</div>
+    </div>
+  </div>
+
+
+  <div class="project-overlay" id="wl">
+    <div class="content">
+      <h1>Wegwijzer Losser</h1>
+      <h3>Promotievideo</h3>
+
+      <p>In opdracht van Daltonschool De Wegwijzer maakte ik een promotievideo ter profilering van de school en het aantrekken van nieuwe leerlingen. Ik verzorgde het gehele traject: van concept en filmopnames tot montage en het componeren van originele muziek.</p>
+
+      <div class="project-scroll">
+        <div class="img"><img src="ww_promo.jpeg"></div>
+        <div class="img"><img src="ww1.jpg"></div>
+        <div class="img"><img src="ww2.jpg"></div>
+        <div class="img"><img src="ww3.jpg"></div>
+      </div>
+
+      <div class="project-embed">
+        <iframe
+          src="https://www.youtube.com/embed/oPjGoF1oyUA"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <div class="button" onclick="closeOverlay('wl')">Sluiten</div>
+    </div>
+  </div>
+
+  <div class="project-overlay" id="ats">
+    <div class="content">
+      <h1>Andere Tijden Sport</h1>
+      <h3>Grafisch Werk</h3>
+
+      <p>Voor de Dennis Bergkamp special van Andere Tijden Sport (NTR) produceerde ik 3D animaties die de verschillende hoofdstukken van de documentaire introduceerden. De aflevering werd uitgezonden op NPO1 en trok meer dan een miljoen kijkers.</p>
+
+      <div class="project-scroll">
+        <div class="img"><img src="ats1.jpg"></div>
+        <div class="img"><img src="ats2.jpg"></div>
+        <div class="img"><img src="ats3.jpg"></div>
+      </div>
+
+      <div class="project-embed">
+        <iframe
+          src="https://player.vimeo.com/video/1020551967"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <div class="button" onclick="closeOverlay('ats')">Sluiten</div>
+    </div>
+  </div>
+
+  <div class="project-overlay" id="atpp">
+    <div class="content">
+      <h1>Andere Tijden</h1>
+      <h3>Huisstijl</h3>
+
+      <p>Voor de online serie Premiersportretten van Andere Tijden (NTR) ontwierp ik de visuele huisstijl. In deze serie worden vier Nederlandse premiers belicht: hun grote uitdagingen, politieke dilemma’s en de tijd waarin ze regeerden. Een terugblik op leiders vóór Mark Rutte, die elk hun eigen stempel drukten op de geschiedenis.
+        
+        De eerste aflevering is hieronder te bekijken via YouTube. Alle vier afleveringen zijn ook te vinden op NPO Start: <a href="https://npo.nl/start/serie/andere-tijden-premiers-portretten" target="_blank">Klik hier om de volledige serie te bekijken</a>
+      </p>
+
+      <div class="project-scroll">
+        <div class="img"><img src="atpp1.jpg"></div>
+        <div class="img"><img src="atpp2.jpg"></div>
+        <div class="img"><img src="atpp3.jpg"></div>
+        <div class="img"><img src="atpp4.jpg"></div>
+        <div class="img"><img src="atpp5.jpg"></div>
+        <div class="img"><img src="atpp6.jpg"></div>
+
+      </div>
+
+      <div class="project-embed">
+        <iframe 
+          src="https://www.youtube.com/embed/-vCbbcxGbSA" 
+          allowfullscreen>
+        </iframe>
+      </div>
+
+
+      <div class="button" onclick="closeOverlay('atpp')">Sluiten</div>
+    </div>
+  </div>
+
+  <div class="project-overlay" id="at">
+    <div class="content">
+      <h1>Andere Tijden</h1>
+      <h3>Social Media</h3>
+
+      <p>Tijdens mijn stage bij NTR werkte ik aan de online zichtbaarheid van Andere Tijden. Ik ontwikkelde en schreef content voor platforms als Instagram, Twitter en Facebook.</p>
+
+<div class="project-scroll">
+  <!-- Instagram embed -->
+  <div class="social-embed">
+    <iframe
+      src="https://www.instagram.com/p/CboweSaNrGb/embed"
+      width="320"
+      height="400"
+      frameborder="0"
+      scrolling="no"
+      allowtransparency="true"
+      allowfullscreen
+    ></iframe>
+  </div>
+
+  <!-- Facebook embed -->
+      <div class="social-embed">
+        <iframe
+          src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FAndereTijden%2Fvideos%2F1141631899742374%2F&t=0"
+          width="320"
+          height="400"
+          style="border:none;overflow:hidden"
+          scrolling="no"
+          frameborder="0"
+          allowfullscreen="true"
+          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+        ></iframe>
+      </div>
+    </div>
+
+
+      <div class="button" onclick="closeOverlay('at')">Sluiten</div>
+    </div>
+  </div>
+
+  <div class="project-overlay" id="isom">
+    <div class="content">
+      <h1>In Search of Music</h1>
+      <h3>Documentaire</h3>
+        <p>In Search of Music is een documentaire die ik heb gemaakt als minorproject. In deze documentaire vertrok ik op reis door Europa om muziek te ontdekken. Hierbij ontmoette ik verschillende muzikanten: van geschoolde pianisten tot straatartiesten. In het onderstaande fragment ontmoet ik Noonzy: op dat moment een straatmuzikant reizend door Europa.</p>
+
+      <div class="project-embed">
+        <iframe
+          src="https://player.vimeo.com/video/1000081869"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <div class="button" onclick="closeOverlay('isom')">Sluiten</div>
+    </div>
+  </div>
+
+  <div class="project-overlay" id="bd">
+    <div class="content">
+      <h1>Bloemendagen</h1>
+      <h3>Promotievideo</h3>
+      <p>Voor de jaarlijkse Bloemendagen in Anna Paulowna heb ik een promotievideo gemaakt. Hierin stonden de mozaïeken, bewegende werkstukken, versierde straten en bruggen centraal. Via de promotievideo wilde ik bezoekers kennis laten maken met alles wat er tijdens de Bloemendagen te bewonderen is.</p>
+      
+      
+        <div class="project-scroll">
+          <div class="img"><img src="bd1.jpg"></div>
+          <div class="img"><img src="bd2.jpg"></div>
+          <div class="img"><img src="bd3.jpg"></div>
+          <div class="img"><img src="bd4.jpg"></div>
+          <div class="img"><img src="bd5.jpg"></div>
+        </div>
+      
+      <div class="project-embed">
+        <iframe
+          src="https://www.youtube.com/embed/mVfRN_wg7-0?si=b50AcA1nU0iDjslM"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <div class="button" onclick="closeOverlay('bd')">Sluiten</div>
+    </div>
+  </div>
+
+
+
+
+<section class="testimonials-section">
+  <div class="testimonials">
+    <div class="quote">  
+      <h1> "Het werkt als een tierelier!" </h1>
+      <p> Regisseur NTR</p>
+    </div>
+      <div class="quote">  
+      <h1> "Bedankt voor je samenwerking en het resultaat. Wat zijn we hier als school trots op!" </h1>
+      <p> Directrice Daltonschool De Wegwijzer</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section" id="contact">
+  <div class="cta">
+    <h2>Neem contact op!</h2>
+    <a href="mailto:dennisjhoeve@gmail.com" class="button">E-mail me</a>
+  </div>
+
+</section>
+
+  <footer>
+    <div class="footertext">
+      <p>Dennis Julio - KVK: 97547794</p>
+    </div>
+  </footer>
+
+</section>
+
+
+  
+
+</body>
+</html>

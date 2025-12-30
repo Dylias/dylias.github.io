@@ -1,0 +1,492 @@
+/* 🧱 Basisinstellingen */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Montserrat';
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  background-color: rgb(58, 58, 58);
+  color: white;
+}
+
+/* 🎨 Typografie */
+h1
+{
+  font-family: 'Montserrat';
+  font-weight: 800;
+  font-size: 2.5rem;
+  transform: rotate(2deg);
+  background: #ff66a3;
+  border: 3px solid #000;
+  box-shadow: 10px 10px 0 #000;
+  padding-left: 20px;
+  padding-right: 20px;
+  overflow: hidden;
+  width: fit-content;         /* 🔹 past zich aan aan tekstbreedte 4fcef1 blauw*/ 
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+h1:hover
+{
+  translate: 0px -6px;
+}
+
+h2
+{
+  padding: 0px 5px 5px 0px;
+}
+
+h3
+{
+  padding: 0px 5px 5px 0px;
+  color: rgba(255, 255, 255, 0.555);
+}
+
+p {
+  font-family: 'Montserrat';
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 450px) {
+  .navbar {
+    justify-content: center !important; /* centreert de nav-links */
+    margin: 0 auto;
+  }
+
+  .navbar h1 {
+    display: none; /* verbergt de h1 */
+  }
+
+  .navbar .nav-links {
+    justify-content: center;
+    display: inline;
+    gap: min(5vw, 20px); /* variabele afstand tussen links */
+  }
+
+
+  .project-overlay .content 
+  {
+    width: 95% !important;
+    height: 95% !important;
+    padding: 20px !important;
+  }
+
+  .project-embed
+  {
+    padding: 5px !important;
+  }
+
+  .project-scroll
+  {
+    padding: 5px !important;
+    gap: 15px !important;
+  }
+}
+
+.card {
+  width: 300px;
+  background: #ff66a3;
+  border: 3px solid #000;
+  box-shadow: 10px 10px 0 #000;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.card:hover {
+  translate: 0px -6px;
+}
+
+/* Subcomponenten binnen .card */
+.card .head {
+  font-size: 14px;
+  font-weight: 900;
+  background: #fff;
+  padding: 5px 12px;
+  color: #000;
+  border-bottom: 3px solid #000;
+}
+
+
+.card .content {
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  flex-grow: 1;
+}
+
+/* Media block werkt voor img en iframe */
+.card .media {
+  width: 100%;
+  aspect-ratio: 1 / 1;     /* werkt perfect voor 1x1 content */
+  object-fit: cover;
+  border-bottom: 3px solid #000;
+}
+
+/* Button consistent en herbruikbaar */
+.button {
+  padding: 5px 10px;
+  margin: 10px 12px;
+  border: 3px solid #000;
+  box-shadow: 3px 3px 0 #000;
+  font-weight: 750;
+  background: #4ade80;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  color: black;
+  text-align: center;
+}
+
+.button:hover {
+  translate: 1.5px 1.5px;
+  box-shadow: 1.5px 1.5px 0 #000;
+  background: #1ac2ff;
+  color: white;
+}
+.button:active {
+  translate: 3px 3px;
+  box-shadow: 0 0 0 #000;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px max(5vw, 20px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+  z-index: 10;
+}
+
+.navbar h1 {
+  font-size: 1rem;
+  box-shadow: 5px 5px 0 #000;
+  padding: 0 5px;
+  text-align: center;
+  margin: 0;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  font-style: italic;
+  margin: 0;
+  padding: 0;
+}
+
+/* Links in de navbar */
+.navbar .nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: opacity 0.3s;
+}
+
+.navbar .nav-links li a:hover {
+  opacity: 0.7;
+}
+
+/* Hero video */
+.video-section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* 16:9 verhouding */
+}
+
+.video-wrapper iframe {
+  position: relative;
+  
+  top: 50%;
+  left: 50%;
+  height: 100vh; /* 16:9 verhouding */
+   /*min-height: 100vh;*/
+  width: 100vh;
+  min-width: 237.037vh;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.video-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('preview.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+}
+
+.hero-text h1 {
+  font-size: 3em;
+}
+
+.hero-text p {
+  transform: rotate(2deg);
+}
+
+/* 👤 Over mij */
+.about-section {
+  padding-top: 100px;
+  padding-bottom:  100px;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  width: 85%;
+}
+
+.about-text {
+  flex: 1 1 400px;
+}
+
+.about-video {
+  flex: 1 1 400px;
+}
+
+.video-square {
+  position: relative;
+  width: 100%;
+  padding-top: 100%; /* 1:1 aspect ratio */
+  overflow: hidden;
+}
+
+.video-square iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  height: 60%;
+  transform: translate(-50%, -50%);
+  border: none;
+}
+
+.project-label {
+  position: absolute;
+  top: 130px;
+  right: 0px;
+  transform: rotate(45deg);
+  transform-origin: top right; /* 🔹 dit helpt de box correct te oriënteren */
+  z-index: 5;
+  text-align: center;
+  padding: 10px 25px;          /* 🔹 ruimer rondom tekst */
+  font-size: 1.1em;
+  font-weight: 500;
+  background: #1ac2ff;
+  border: 3px solid #000;
+  box-shadow: 10px 10px 0 #000;
+  margin: 0;
+}
+
+.projects-section
+{
+  background-color: #111;
+  padding-top: 30px;
+  padding-bottom: 0px;
+  box-shadow: 10px 10px 0 #000;;
+}
+
+.project-header h1
+{
+    top: 30px;
+    left: 100px;
+    position: relative;
+}
+
+
+.project-scroll
+{
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 10px 10px;
+  background-color: #111;
+}
+
+.project
+{
+  display: inline-block;
+  position: relative;
+  width: fit-content;
+  padding: 40px;
+}
+
+.project-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+.project-scroll::-webkit-scrollbar-thumb {
+  background: hotpink;
+  border-radius: 4px;
+}
+
+.project-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.90);
+  display: none;
+  z-index: 99;
+}
+
+.project-overlay.active {
+  display: flex;
+}
+
+.project-overlay .content {
+  width: 90%;
+  height: 90%;
+  padding: 50px;
+  margin: auto;
+  background: #111;
+  border: 3px solid hotpink;
+
+  overflow-y: auto;             /* 🔹 maakt verticale scroll mogelijk */
+}
+
+.project-overlay .project-scroll
+{
+  gap: 20px;
+  background-color: #2b2b2b;
+}
+
+.project-embed {
+  margin-top: 40px;
+  padding: 20px;
+  background: #2b2b2b;
+  text-align: center;
+  aspect-ratio: 16 / 9;
+
+}
+
+.project-embed iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.project-scroll .img
+{
+   height: 200px;
+}
+
+.project-scroll img
+{
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+
+.testimonials-section
+{
+  background-color: rgb(99, 99, 99);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.testimonials {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  width: 90%;
+  margin: auto;
+  flex-wrap: wrap;       /* 🔸 laat ze onder elkaar komen als het te krap wordt */
+}
+
+.quote {
+  text-align: center;
+  padding: 20px;
+  margin: auto;
+}
+
+.quote p {
+  font-style: italic;
+  transform: rotate(3deg);
+  margin: auto;
+}
+
+.quote h1
+{
+  font-weight: 600;
+  background-color: #1ac2ff;
+  font-size: 1.5em;
+  padding: 10px;
+}
+
+.cta-section
+{
+  margin: auto;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.cta
+{
+  margin: auto;
+  width: 80%;
+  padding: 50;
+  text-align: center;
+}
+
+.cta h2
+{
+  text-align: center;
+  margin: auto;
+  padding: 20px;
+}
+
+footer
+{
+  background-color: black;
+  color: white;
+}
+
+.footertext
+{
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 80%;
+}
+
+.footertext p{
+  font-size: 0.7em;
+  margin: auto;
+}
+
+
